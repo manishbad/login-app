@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "DOCKERHUB_USERNAME/login-app:latest"
+        DOCKER_IMAGE = "manishbadgujar/login-app:latest"
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/YOUR_REPO/login-app.git'
+                checkout scm
             }
         }
 
